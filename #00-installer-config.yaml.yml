@@ -4,46 +4,51 @@
 #Cuidar, pois este arquivo de configuração precisa estar
 #bem alinhado os espaços para não dar erro.
 #não é permitido tabulações no arquivo
-##########################################################
+
 network:
       ethernets:
         enp3s4f0:
               addresses:
-                    - 172.16.1.103/24
-              gateway4: 172.16.1.1
+                    - ***.***.***.***/**
+              gateway4: ***.**.*.*
                 nameservers:
                     search: [home]
-                    addresses: [172.16.1.1, 8.8.8.8] 
+                    addresses: [***.**.*.*, 8.8.8.8] 
       version: 2
-##########################################################
+
 #enp3s4f0: Modificar para sua rede
 #addresses: 
-#- 172.16.1.103/24 modificar para seu endereço de rede
-#gateway4: 172.16.1.1 modificar para seu gateway(rota estática)
+#- ***.***.***.***/** modificar para seu endereço de rede
+#gateway4: ***.**.*.* modificar para seu gateway(rota estática)
 #nameservers:
 #search: [home]
-#addresses: [172.16.1.1, 8.8.8.8] endereço de gateway da sua rede e coloquei o do google tambem 
+#addresses: [***.**.*.*, 8.8.8.8] endereço de gateway da sua rede e adicionei o do google ao lado, 
+#lembrando que neste arquivo precisa estar separado com ","
 
-###"ip rout s" você mostra os endereços de rota estática(gateway)disponiveis para sua rede
+###"ip rout s" você mostra os endereços de rota estática(gateway)disponiveis para sua rede###
 
 
 ###########################TESTE############################
 ############################################################
-network:
-  ethernets:
-    enp3s4f0:
-      dhcp4: true
-      addresses:
-       - 172.16.1.103/24
-      gateway4: 172.16.1.1
-      nameservers:
-       search: [home]
-       addressses: [172.16.1.1, 8.8.8.8]
-    enp3s4f1:
-      dhcp4: true
-  version: 2
+#Teste com a configuração original do arquivo.
+
+#network:
+#  ethernets:
+#    enp3s4f0:
+#      dhcp4: true
+#      addresses:
+#       - ***.***.***.***/**
+#      gateway4: ***.**.*.*
+#      nameservers:
+#       search: [home]
+#       addressses: [***.**.*.*, 8.8.8.8]
+#    enp3s4f1:
+#      dhcp4: true
+#  version: 2
 ############################################################
 
-#Após a configuração do resolved.conf aplicar as configurações
-##digite o comando: netplan apply (aplicar as configurações do arq 000)
-###systemctl restart systemd-resolved (aplicar as configurações DNS do resolved)
+
+#Após a configuração do resolved.conf, aplicar as configurações
+#digitando o comando: "netplan apply" (aplicar as configurações do arq "#00-")
+#Caso ocorra algum erro após o "netplan apply", volte ao arquivo e olhe os espaçametos antes das informações.
+#Após isto, digite o comando: "systemctl restart systemd-resolved" (aplicar as configurações DNS do resolved)
