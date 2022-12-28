@@ -1,2 +1,2 @@
 # Openstack
- Arquivos de configuração de instalação do Openstack
+ Arquivos de configuração do Devstack para a instalação do Openstack
