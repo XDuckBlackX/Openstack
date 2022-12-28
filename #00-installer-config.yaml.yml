@@ -1,0 +1,49 @@
+#Confgiuração do arquivo 00-installer-config.yaml 
+#diretório /etc/netplan
+
+#Cuidar, pois este arquivo de configuração precisa estar
+#bem alinhado os espaços para não dar erro.
+#não é permitido tabulações no arquivo
+##########################################################
+network:
+      ethernets:
+        enp3s4f0:
+              addresses:
+                    - 172.16.1.103/24
+              gateway4: 172.16.1.1
+                nameservers:
+                    search: [home]
+                    addresses: [172.16.1.1, 8.8.8.8] 
+      version: 2
+##########################################################
+#enp3s4f0: Modificar para sua rede
+#addresses: 
+#- 172.16.1.103/24 modificar para seu endereço de rede
+#gateway4: 172.16.1.1 modificar para seu gateway(rota estática)
+#nameservers:
+#search: [home]
+#addresses: [172.16.1.1, 8.8.8.8] endereço de gateway da sua rede e coloquei o do google tambem 
+
+###"ip rout s" você mostra os endereços de rota estática(gateway)disponiveis para sua rede
+
+
+###########################TESTE############################
+############################################################
+network:
+  ethernets:
+    enp3s4f0:
+      dhcp4: true
+      addresses:
+       - 172.16.1.103/24
+      gateway4: 172.16.1.1
+      nameservers:
+       search: [home]
+       addressses: [172.16.1.1, 8.8.8.8]
+    enp3s4f1:
+      dhcp4: true
+  version: 2
+############################################################
+
+#Após a configuração do resolved.conf aplicar as configurações
+##digite o comando: netplan apply (aplicar as configurações do arq 000)
+###systemctl restart systemd-resolved (aplicar as configurações DNS do resolved)
