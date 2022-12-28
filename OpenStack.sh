@@ -19,4 +19,6 @@ git clone https://opendev.org/openstack/devstack
 #caso queira puxar uma outra atualização mais antiga usar no final "-b stable/#NomeDaAtualização"
 cd devstack
 
+sudo chown stack:stack -R /opt/stack
+
 ###Caso queira fazer por linha de comando cada um dos comando acima também é possivel###
