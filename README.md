@@ -4,7 +4,7 @@ Arquivos que contém as configuração do Devstack para a instalação do
                             
 ###################### Ordem das configurações: ######################
 
- 1 - Modificar a zona do sistema 
+1 - Modificar a zona do sistema 
 ---------------------------------------------------------------------------------------------------------------------------
 Digitar o comando "timedatectl list-timezone" para listar as zonas.
 
@@ -13,7 +13,6 @@ Escolher a zona desejada.
 Para modfiicar, utilizar o comando "timedatectl set-timezone " seguido da zona desejada. 
 
 Depois reiniciaro serviço de timezone do Systemd 
-
 Utilizando o comando "systemctl restart systemd-timedated"
 ---------------------------------------------------------------------------------------------------------------------------
  2 - Openstack.sh
