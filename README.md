@@ -6,25 +6,26 @@ Arquivos que contém as configuração do Devstack para a instalação do
 
  1 - Modificar a zona do sistema 
 
- # Digitar o comando "timedatectl list-timezone" para listar as zonas.
- # Escolher a zona desejada.
- # Para modfiicar, utilizar o comando "timedatectl set-timezone " seguido
- # da zona desejada. 
- # Depois reiniciaro serviço de timezone do Systemd 
- # Utilizando o comando "systemctl restart systemd-timedated"
+ 
+  Digitar o comando "timedatectl list-timezone" para listar as zonas.
+  Escolher a zona desejada.
+  Para modfiicar, utilizar o comando "timedatectl set-timezone " seguido
+  da zona desejada. 
+  Depois reiniciaro serviço de timezone do Systemd 
+  Utilizando o comando "systemctl restart systemd-timedated"
 
  2 - Openstack.sh
- # Caso queira usar o arquivo, contrário utilizar os comandos
- # citados nele.
+  Caso queira usar o arquivo, contrário utilizar os comandos
+  citados nele.
 
  3 - 00-installer-config.yaml -->> /etc/netplan
  
  4 - resolved.conf ------------->> /etc/systemd
 
- # Após a configuração do resolved.conf aplique as configurações:
- # Digite o comando: netplan apply (aplicar as configurações do arq 000)
- # "systemctl restart systemd-resolved" (aplicar as configurações DNS do
- # resolved)
+  Após a configuração do resolved.conf aplique as configurações:
+  Digite o comando: netplan apply (aplicar as configurações do arq 000)
+  "systemctl restart systemd-resolved" (aplicar as configurações DNS do
+  resolved)
 
  5 - local.conf ---------------->> /opt/stack/devstack
  
