@@ -39,5 +39,5 @@ Dica 1:
 
 Dica 2:
 
-    Caso de exit na instalação do "stack.sh"(na linha 560) e não completando a instalção, comentar a linha 560("#exit"). Ou 
-    caso queira comentar antes de iniciar a primeira instalação, também é possivel.
+    Caso de exit na instalação do "stack.sh"(na linha 560) e não completando a instalção, comentar a 
+    linha 560("#exit").
