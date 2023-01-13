@@ -1,13 +1,11 @@
-#Openstack
-
 Arquivos que contém as configuração do Devstack para a instalação do 
                         OPENSTACK
                             
 ###################### Ordem das configurações: ######################
 
-#1 - Modificar a zona do sistema 
+1 - Modificar a zona do sistema 
 ---------------------------------------------------------------------------------------------------------------------------
-#Digitar o comando "timedatectl list-timezone" para listar as zonas.
+Digitar o comando "timedatectl list-timezone" para listar as zonas.
 
 #Escolher a zona desejada.
 
