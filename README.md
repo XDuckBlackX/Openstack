@@ -1,5 +1,4 @@
-Arquivos que contém as configuração do Devstack para a instalação do 
-                        OPENSTACK 
+Configuração do Devstack para a instalação do Openstack
                         
 ###################### Ordem das configurações: ######################
 
