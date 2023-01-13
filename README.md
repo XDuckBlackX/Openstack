@@ -1,5 +1,7 @@
 Arquivos que contém as configuração do Devstack para a instalação do 
-                        OPENSTACK
+                        OPENSTACK 
+
+Modificar a zona do sistema
                             
 ###################### Ordem das configurações: ######################
 
