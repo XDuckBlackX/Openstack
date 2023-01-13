@@ -1,4 +1,4 @@
-Configuração do Devstack para a instalação do Openstack
+                          Configuração do Devstack para a instalação do Openstack
                         
 ###################### Ordem das configurações: ######################
 
