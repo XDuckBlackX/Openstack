@@ -3,7 +3,7 @@ Arquivos que contém as configuração do Devstack para a instalação do
                         
 ###################### Ordem das configurações: ######################
 
-Modificar a zona do sistema
+1- Modificar a zona do sistema
 
 Digitar o comando "timedatectl list-timezone" para listar as zonas.
 Escolher a zona desejada.
