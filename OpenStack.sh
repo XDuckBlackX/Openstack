@@ -5,8 +5,7 @@
 #!/bin/bash
 
 sudo apt update
-sudo apt upgrade -y
-sudo apt dist-upgrade -y
+sudo apt upgrade && dist-upgrade -y
 
 sudo useradd -s /bin/bash -d /opt/stack -m stack
 sudo chmod +x /opt/stack
